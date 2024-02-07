@@ -15,6 +15,10 @@ class ComposerStaticInit9612c1228beb02b88d03ac0b2b90ede3
         array (
             'Google\\Authenticator\\' => 21,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -25,6 +29,10 @@ class ComposerStaticInit9612c1228beb02b88d03ac0b2b90ede3
         'Google\\Authenticator\\' => 
         array (
             0 => __DIR__ . '/..' . '/sonata-project/google-authenticator/src',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 

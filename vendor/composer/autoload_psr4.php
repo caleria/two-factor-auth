@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Sonata\\GoogleAuthenticator\\' => array($vendorDir . '/sonata-project/google-authenticator/src'),
     'Google\\Authenticator\\' => array($vendorDir . '/sonata-project/google-authenticator/src'),
+    'App\\' => array($baseDir . '/app'),
 );
