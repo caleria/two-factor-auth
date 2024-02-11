@@ -29,19 +29,21 @@ if ($userController->isUserLoggedIn()) {
                 <hr>
 
                 <form id="register-form">
-                    <div class="mb-3">
+                    <div class="form-group">
                         <label for="name" class="form-label">Nombre</label>
                         <input type="text" class="form-control" id="name" autocomplete="name">
                     </div>
-                    <div class="mb-3">
+                    <div class="form-group">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" autocomplete="email">
                     </div>
-                    <div class="mb-3">
+                    <div class="form-group">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Crear cuenta</button>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-primary">Crear cuenta</button>
+                    </div>
                 </form>
                 <div class="alert alert-danger mt-4 d-none" id="error-message"></div>
             </div>
