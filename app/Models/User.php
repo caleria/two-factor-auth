@@ -31,6 +31,9 @@ class User extends Database
         }
     }
 
+
+
+
     public function getUser($email)
     {
         try {
@@ -50,5 +53,43 @@ class User extends Database
             return null;
         }
     }
+
+
+
+
+    public function createSecret($secret, $id)
+    {
+        try {
+            $query = $this->db->prepare("UPDATE users SET two_factor_key = ? WHERE id = ?");
+            $query->bindValue(1, $secret);
+            $query->bindValue(2, $id);
+            $query->execute();
+            $query->closeCursor();
+        } catch (PDOException $e) {
+            // Manejar la excepción aquí si es necesario
+            throw $e; // Lanzar la excepción para que sea manejada en un nivel superior
+        }
+    }
+
+    
+    
+
+    public function deleteSecret($id)
+    {
+        try {
+            $query = $this->db->prepare("UPDATE users SET two_factor_key = null WHERE id = ? ");
+            $query->bindValue(1, $id);
+            $query->execute();
+            $query->closeCursor();
+        } catch (PDOException $e) {
+            // Manejar la excepción aquí
+            // Por ejemplo, puedes imprimir un mensaje de error o realizar alguna acción específica
+            //echo "Error al crear el usuario: " . $e->getMessage();
+            // O puedes lanzar nuevamente la excepción para que sea manejada en un nivel superior
+            throw $e;
+        }
+    }
+
+
 
 }

@@ -27,11 +27,17 @@ class Database
         }
     }
 
+
+
+
     public function __destruct()
     {
         $this->db = null;
     }
 
+
+
+    
     public function obtenerConexion()
     {
         return $this->db;
