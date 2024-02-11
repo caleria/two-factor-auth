@@ -9,4 +9,4 @@ use App\Controllers\UserController;
 $userController = new UserController();
 $userController->logout();
 
-header('Location: ../login.php');
+header('Location: ../index.php');
